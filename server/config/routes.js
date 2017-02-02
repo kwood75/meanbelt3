@@ -2,7 +2,6 @@
 users = require('../controllers/userController.js')
 polls = require('../controllers/pollsController.js')
 module.exports = function(app){
-  // app.get('/products', products.index);
   app.post('/user', users.create);
   app.post('/finduser', users.find);
   app.post('/poll', polls.create);

@@ -1,4 +1,4 @@
-    app.factory('pollFactory',['$http',function($http){
+app.factory('pollFactory',['$http',function($http){
       function pollFactory(){
         var _this = this;
         this.AddPoll = function(poll, callback){

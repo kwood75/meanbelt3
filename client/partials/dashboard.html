@@ -8,24 +8,26 @@
 <input type="text" name="" value="" ng-model='search_input' placeholder="search">
 
 <h3>User Name: {{current_user.name}}</h3>
-<table>
-  <thead>
-    <tr>
-      <td>Name</td>
-      <td>Survey Question</td>
-      <td>Date Posted</td>
-      <td>Action</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat='poll in polls | filter:search_input'>
-      <td>{{poll._creator.name}}</td>
-      <td><a href="#!/show/{{poll._id}}">{{poll.question}}</a></td>
-      <td>{{poll.created_at | date:'hh:mm, MMM dd, yyyy'}}</td>
+<fieldset>
+    <table>
+      <thead>
+        <tr>
+              <td>Name |</td>
+              <td>Survey Question |</td>
+              <td>Date Posted |</td>
+              <td>Action |</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat='poll in polls | filter:search_input'>
+          <td>{{poll._creator.name}}</td>
+          <td><a href="#!/show/{{poll._id}}">{{poll.question}}</a></td>
+          <td>{{poll.created_at | date:'MMM dd, yyyy'}}</td>
 
-      <td><button ng-show="poll._creator._id===current_user._id" ng-click="delete(poll)">Delete</button></td>
-    </tr>
-  </tbody>
-</table>
+          <td><button ng-show="poll._creator._id===current_user._id" ng-click="delete(poll)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+</fieldset>
 
 </div>

@@ -1,18 +1,20 @@
-<div class="" ng-controller='createController'>
-  <h3>Put the question and options here:</h3><a href="#!/dashboard">Cancel/Go Back</a>
+<div ng-controller='createController'>
+  <h3>Please add question and options here:</h3><a href="#!/dashboard">Cancel/Go Back</a>
+  
   <form class="" ng-submit='AddPoll(poll)' name='pollForm'>
-
-    <label>Question:</label>
-    <input type="text" name="" value="" ng-model='poll.question' ng-minlength='8' required placeholder="minimum 8 characters"><br>
-    <label>Option 1:</label>
-    <input type="text" name="" value="" ng-model='poll.option1.name' ng-minlength='3'required placeholder="minimum 3 characters"><br>
-    <label>Option 2:</label>
-    <input type="text" name="" value="" ng-model='poll.option2.name' ng-minlength='3'required placeholder="minimum 3 characters"><br>
-    <label>Option 3:</label>
-    <input type="text" name="" value="" ng-model='poll.option3.name' ng-minlength='3'required placeholder="minimum 3 characters"><br>
-    <label>Option 4:</label>
-    <input type="text" name="" value="" ng-model='poll.option4.name' ng-minlength='3'required placeholder="minimum 3 characters"><br>
-    <input type="text" name="" value="" ng-model='current_user._id'><br>
-    <input type="submit" name="submit" value="submit" ng-disabled="pollForm.$invalid">
+    <fieldset>
+        <label>Question:</label>
+        <input type="text" name="" value="" ng-model='poll.question' ng-minlength='7' required placeholder="minimum 8 characters"><br>
+        <label>Option 1:</label>
+        <input type="text" name="" value="" ng-model='poll.option1.name' ng-minlength='3'required placeholder="minimum 3 characters"><br>
+        <label>Option 2:</label>
+        <input type="text" name="" value="" ng-model='poll.option2.name' ng-minlength='3'required placeholder="minimum 3 characters"><br>
+        <label>Option 3:</label>
+        <input type="text" name="" value="" ng-model='poll.option3.name' ng-minlength='3'required placeholder="minimum 3 characters"><br>
+        <label>Option 4:</label>
+        <input type="text" name="" value="" ng-model='poll.option4.name' ng-minlength='3'required placeholder="minimum 3 characters"><br>
+        <input type="text" name="" value="" ng-model='current_user._id'><br>
+        <input type="submit" name="submit" value="submit" ng-disabled="pollForm.$invalid">
+    </fieldset>
   </form>
 </div>

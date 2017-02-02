@@ -1,0 +1,67 @@
+Deployment for meanbelt3
+
+Putty Passphrase: meanbelt3
+
+IPv4 Public IP
+35.164.43.163
+
+sudo git clone https://github.com/kwood75/meanbelt3.git
+
+
+sudo vim meanbelt3
+
+
+server {     
+listen 80;     
+location / {         
+proxy_pass http://localhost:8000;        
+proxy_http_version 1.1;        
+proxy_set_header Upgrade $http_upgrade;        
+proxy_set_header Connection 'upgrade';        
+proxy_set_header Host $host;        
+proxy_cache_bypass $http_upgrade;    
+   }
+}
+
+
+
+
+sudo ln -s /etc/nginx/sites-available/meanbelt3/etc/nginx/sites-enabled/meanbelt3
+
+
+
+
+
+
+
+
+
+
+
+
+
+Github---info
+Quick setup — if you’ve done this kind of thing before
+ Set up in Desktop	or	
+ HTTPS
+ SSH
+
+https://github.com/kwood75/meanbelt2.git
+
+We recommend every repository include a README, LICENSE, and .gitignore.
+…or create a new repository on the command line
+
+echo "# meanbelt1" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/kwood75/meanbelt2.git
+git push -u origin master
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/kwood75/meanbelt2.git
+git push -u origin master
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+Import code

@@ -3,7 +3,6 @@ app.controller('loginController',['$scope','$location','userFactory',function($s
   $scope.login = function(user){
     userFactory.FindUser(user,function(result){
       if (result == null){
-        // if user is not found then we create the user
         userFactory.Create(user,function(result1){
           $location.url('/dashboard')
         })

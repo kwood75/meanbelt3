@@ -4,9 +4,9 @@ var PollSchema = new mongoose.Schema({
   
   question: {
   	type:String,
-  	required:[true, 'You must enter a question to submit!'],
-  	minlength: 10,
-		message: 'Question must be at least 10 characters'
+  	required:[true, 'Please enter a question to submit!'],
+  	minlength: 7,
+		message: 'Question must be at least 7 characters'
 		},
   
   option1:{ name:{ type:String, required:true }, count:{ type:Number, default:0 }},
